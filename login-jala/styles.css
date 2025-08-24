@@ -1,0 +1,171 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #EDEDED;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Frame Desktop (contenedor principal) */
+.desktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 10vh 30vh;
+}
+
+/* Login Frame */
+.login-frame {
+  display: flex;
+  flex: 1;
+  max-width: 1100px;
+  max-height: 700px;
+  width: 100%;
+  background: #FFF;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Imagen izquierda */
+.image-side {
+  flex: 1.2;
+  background: url("assets/background.png") center center / cover no-repeat;
+
+}
+
+/* Main (Formulario) */
+.main {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Logo */
+.logo {
+  margin-bottom: 60px;
+}
+
+.logo img {
+  height: 36px;
+}
+
+/* Title */
+.title {
+  margin-bottom: 24px;
+}
+
+.title h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007BFF;
+}
+
+/* Forgot password */
+.forgot-password {
+  text-align: right;
+  margin-bottom: 24px;
+}
+
+.forgot-password a {
+  font-size: 13px;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Sign in button */
+.signin button {
+  width: 100%;
+  padding: 14px;
+  background: #007BFF;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.signin button:hover {
+  background: #0056cc;
+}
+
+/* Create account */
+.create-account {
+  font-size: 13px;
+  text-align: center;
+  color: #333;
+}
+
+.create-account a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.create-account a:hover {
+  text-decoration: underline;
+}
+
+/* 📱 Responsividad */
+@media (max-width: 1024px) {
+  .login-frame {
+    max-width: 90%;
+    max-height: none;
+    flex-direction: column;
+  }
+
+  .image-side {
+    display: none;
+  }
+
+  .main {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 20px;
+  }
+
+  .title h2 {
+    font-size: 18px;
+  }
+
+  input {
+    font-size: 13px;
+  }
+}
